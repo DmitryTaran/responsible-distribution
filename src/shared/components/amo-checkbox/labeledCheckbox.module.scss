@@ -1,0 +1,48 @@
+.checkbox-container {
+  display: flex;
+  gap: 10px;
+
+  &-text-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-label {
+    transition: color 0.3s;
+    color: var(--responsible-main-text-color);
+    font-family: "PT Sans", sans-serif;
+    font-size: 15px;
+    line-height: normal;
+    cursor: pointer;
+    margin-top: auto;
+    margin-bottom: auto;
+    &-disabled {
+      color: var(--responsible-table-border-color);
+      cursor: default;
+    }
+  }
+
+  &-hint {
+    transition: color 0.3s;
+    color: var(--responsible-main-blue-color);
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+
+    &-disabled {
+      color: var(--responsible-disabled-blue-color);
+    }
+  }
+}
+
+.tooltip {
+  border-radius: 3px;
+  background: var(--responsible-main-bg-color);
+  box-shadow: 0 2px 5.8px 0 rgba(0, 0, 0, 0.15);
+  color: var(--Text, #363B44);
+  font-family: "PT Sans", sans-serif;
+  font-size: 10px;
+  line-height: normal;
+  padding: 8px;
+}

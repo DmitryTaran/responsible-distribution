@@ -1,0 +1,32 @@
+.headerContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 9px;
+}
+
+.header{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  padding: 5px 7px 5px 8px;
+  cursor: pointer;
+  color: var(--responsible-main-text-color);
+  &:hover{
+    color: var(--responsible-current-day-color)
+  }
+}
+
+.title {
+  color: var(--responsible-main-text-color);
+  text-align: center;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 15px;
+  line-height: normal;
+  align-self: center;
+}
+

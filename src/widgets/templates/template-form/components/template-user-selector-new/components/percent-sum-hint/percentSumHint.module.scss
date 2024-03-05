@@ -1,0 +1,8 @@
+.hint {
+
+  color: var(--responsible-main-blue-color);
+
+  &_invalid {
+    color: var(--responsible-delete-color)
+  }
+}

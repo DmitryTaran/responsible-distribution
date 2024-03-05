@@ -1,0 +1,42 @@
+:root {
+    --responsible-main-blue-color: #366FB4;
+    --responsible-disabled-blue-color: #93C1EF;
+    --responsible-transparent-blue: rgba(25, 118, 210, 0.15);
+    --responsible-divider-color: #ccc;
+    --responsible-primary-font-color-light: #333;
+    --responsible-main-bg-color: #fff;
+    --responsible-main-border-color:#e8eaeb;
+    --responsible-main-text-color: #363b44;
+    --responsible-main-placeholder-color: #9a9b9c;
+    --responsible-main-scroll-truck-color: #e2e2e2;
+    --responsible-main-scroll-thumb-color: #c5c5c5;
+    --responsible-main-warning-color: #eb3737;
+    --responsible-table-border-color: #c2c2c2;
+    --responsible-checkbox-background: #F6F6F6;
+    --responsible-table-blue: #76ACDE;
+    --responsible-table-grey: #92989B;
+    --responsible-day-hover-color: #f6f6f6;
+    --responsible-current-day-color: #4C8BF7;
+    --responsible-delete-color: #E56B6B;
+    --responsible-date-picker-z-index: 9999;
+    --responsible-group-yellow: #ffff99;
+    --responsible-group-yellow-hover: #EEEE91;
+    --responsible-group-blue: #99ccff;
+    --responsible-group-blue-hover: #93C1EF;
+    --responsible-group-orange: #ffcc66;
+    --responsible-group-orange-hover: #E8BD67;
+    --responsible-group-rose: #ffcccc;
+    --responsible-group-rose-hover: #ECB6B6;
+    --responsible-gray-input-color: #848484;
+    --filter-hover:  brightness(92%);
+}
+
+#work_area {
+    box-sizing: border-box;
+}
+
+.reon-responsible-distribution__toggler-wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: min-content;
+}

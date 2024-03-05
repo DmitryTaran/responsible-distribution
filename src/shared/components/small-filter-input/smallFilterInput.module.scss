@@ -1,0 +1,47 @@
+.filter-input-container {
+  display: flex;
+  border: 1px solid var(--responsible-table-grey);
+  padding: 2px 20px 2px 7px;
+  border-radius: 3px;
+  align-items: center;
+
+  &:focus-within {
+    border: 1px solid var(--responsible-table-blue);
+  }
+
+  position: relative;
+}
+
+.filter-input {
+  display: flex;
+  align-items: center;
+  outline: none;
+  font-family: "PT Sans", sans-serif;
+  color: var(--Text, #363B44);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: normal;
+  border: 0;
+}
+
+.input-icon {
+  position: absolute;
+  right: 5px;
+  justify-self: flex-end;
+
+  &-cross {
+    color: var(--responsible-table-grey);
+
+    &:hover {
+      color: var(--responsible-table-blue)
+    }
+  }
+
+  &-calendar {
+    color: var(--responsible-table-grey);
+  }
+}
+
+.filter-input-container:focus-within .input-icon-calendar {
+  color: var(--responsible-table-blue)
+}

@@ -1,0 +1,10 @@
+.weight-input {
+  color: var(--responsible-main-text-color);
+  font-family: "PT Sans", sans-serif;
+  font-size: 12px;
+  width: 22px;
+  line-height: normal;
+  &_invalid {
+    border-color: var(--responsible-delete-color);
+  }
+}

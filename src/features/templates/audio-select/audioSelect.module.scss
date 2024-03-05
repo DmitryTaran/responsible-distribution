@@ -1,0 +1,18 @@
+@import "shared/styles/mixins.module";
+
+.audio-button {
+  @include button-reset;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  color: var(--responsible-table-border-color);
+  cursor: default;
+  &_active {
+    transition: color .25s;
+    cursor: pointer;
+    &:hover {
+      color: var(--responsible-table-blue);
+    }
+  }
+
+}

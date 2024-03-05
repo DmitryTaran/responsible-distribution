@@ -1,0 +1,51 @@
+import 'dotenv/config';
+import { Env } from './env.type';
+
+export const prodEnv: Env = {
+	ENV_SERVER_URL: JSON.stringify(process.env.SERVER_URL),
+
+	ENV_WIDGET_API_ENDPOINT_PROD: JSON.stringify(process.env.WIDGET_API_ENDPOINT_PROD),
+	ENV_WIDGET_API_ENDPOINT_DEV: undefined,
+	ENV_WIDGET_API_ENDPOINT_TEST: undefined,
+
+	ENV_INTEGRATION_NAME_PROD: JSON.stringify(process.env.INTEGRATION_NAME_PROD),
+	ENV_INTEGRATION_NAME_DEV: undefined,
+	ENV_INTEGRATION_NAME_TEST: undefined,
+
+	ENV_WEBSOCKET_ENDPOINT_PROD: JSON.stringify(process.env.WEBSOCKET_ENDPOINT_PROD),
+	ENV_WEBSOCKET_ENDPOINT_DEV: undefined,
+	ENV_WEBSOCKET_ENDPOINT_TEST: undefined,
+
+};
+
+export const devEnv: Env = {
+	ENV_SERVER_URL: JSON.stringify(process.env.SERVER_URL),
+
+	ENV_WIDGET_API_ENDPOINT_PROD: undefined,
+	ENV_WIDGET_API_ENDPOINT_DEV:  JSON.stringify(process.env.WIDGET_API_ENDPOINT_DEV),
+	ENV_WIDGET_API_ENDPOINT_TEST: undefined,
+
+	ENV_INTEGRATION_NAME_PROD: undefined,
+	ENV_INTEGRATION_NAME_DEV: JSON.stringify(process.env.INTEGRATION_NAME_DEV),
+	ENV_INTEGRATION_NAME_TEST: undefined,
+
+	ENV_WEBSOCKET_ENDPOINT_PROD: undefined,
+	ENV_WEBSOCKET_ENDPOINT_DEV: JSON.stringify(process.env.WEBSOCKET_ENDPOINT_DEV),
+	ENV_WEBSOCKET_ENDPOINT_TEST: undefined,
+};
+
+export const testEnv: Env = {
+	ENV_SERVER_URL: JSON.stringify(process.env.SERVER_URL),
+
+	ENV_WIDGET_API_ENDPOINT_PROD: undefined,
+	ENV_WIDGET_API_ENDPOINT_DEV:  undefined,
+	ENV_WIDGET_API_ENDPOINT_TEST: JSON.stringify(process.env.WIDGET_API_ENDPOINT_TEST),
+
+	ENV_INTEGRATION_NAME_PROD: undefined,
+	ENV_INTEGRATION_NAME_DEV: undefined,
+	ENV_INTEGRATION_NAME_TEST: JSON.stringify(process.env.INTEGRATION_NAME_TEST),
+
+	ENV_WEBSOCKET_ENDPOINT_PROD: undefined,
+	ENV_WEBSOCKET_ENDPOINT_DEV: undefined,
+	ENV_WEBSOCKET_ENDPOINT_TEST: JSON.stringify(process.env.WEBSOCKET_ENDPOINT_TEST),
+};

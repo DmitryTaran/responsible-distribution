@@ -1,0 +1,32 @@
+.huy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: no-repeat url(https://www.meme-arsenal.com/memes/02f633c9cce114b992441b07d21124fe.jpg);
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  animation: niger 10s infinite;
+  pointer-events: none;
+}
+
+@keyframes niger {
+  0% {
+    opacity: 0;
+  }
+
+  47%{
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  53% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

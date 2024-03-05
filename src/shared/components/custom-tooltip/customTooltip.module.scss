@@ -1,0 +1,15 @@
+.tooltip {
+  border-radius: 3px;
+  background: var(--responsible-main-bg-color);
+  box-shadow: 0 2px 5.8px 0 rgba(0, 0, 0, 0.15);
+  color: var(--Text, #363B44);
+  font-family: "PT Sans", sans-serif;
+  font-size: 10px;
+  line-height: normal;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.popper {
+  pointer-events: none;
+}

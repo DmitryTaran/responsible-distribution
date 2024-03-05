@@ -1,0 +1,15 @@
+export const DpQuerySelectors = {
+	DpSaveButton: '.digital-pipeline__save-button',
+	DpCancelButton: '.digital-pipeline__cancel-button',
+	ConfirmModal: '.js-modal-confirm',
+	ModalSaveButton: '.modal-body__actions__save',
+	ModalCancelButton: '.button-cancel',
+	ModalTitle: '.modal-body__caption',
+	NewDistributionTriggerInput: 'input[name="triggerInfo"]',
+	OldDistributionTriggerInput: 'input[name="widget_instance_id"]',
+	DpSettingsBlock: 'widget_settings__fields_wrapper',
+	DpInputContainer: '.widget_settings_block__item_field.form-group',
+	DpTable: '.digital-pipeline__table',
+	SaveTriggerButton: '.js-trigger-save',
+	DeleteTriggerButton: '.digital-pipeline__settings_condition-delete',
+} as const

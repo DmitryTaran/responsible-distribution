@@ -1,0 +1,62 @@
+.select {
+  cursor: pointer;
+  background-color: var(--responsible-main-bg-color);
+  width: fit-content;
+  gap: 13px;
+  box-sizing: border-box;
+  font-family: "PT Sans", sans-serif;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  border-radius: 3px;
+  border: 1px solid var(--responsible-table-border-color);
+  font-size: 15px;
+
+  &Value {
+    color: var(--responsible-primary-font-color-light);
+    line-height: normal;
+  }
+
+  &Active {
+    border-color: var(--responsible-table-blue);
+  }
+
+  &Options {
+    background-color: var(--responsible-main-bg-color);
+    border-radius: 3px;
+    box-shadow: 0 2px 5.8px 0 rgba(0, 0, 0, 0.15);
+  }
+}
+
+
+.listItem {
+  font-family: "PT Sans", sans-serif;
+  font-size: 15px;
+  display: flex;
+  padding: 5px 7px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  &Selected {
+    background-color: var(--responsible-checkbox-background);
+  }
+
+  &:hover {
+    background-color: var(--responsible-checkbox-background);
+  }
+
+}
+
+.svg {
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+  color: var(--responsible-table-border-color);
+
+  &Open {
+    color: var(--responsible-table-blue);
+  }
+}
+

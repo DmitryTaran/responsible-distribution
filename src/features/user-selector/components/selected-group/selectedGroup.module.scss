@@ -1,0 +1,35 @@
+@import "../../lib/styles/mixins.module";
+
+.selected-group {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 8px;
+  justify-content: space-between;
+  transition: filter .2s;
+
+  &:first-of-type {
+    border-radius: 0 2px 0 0;
+  }
+
+  &__svg {
+    @include hidden-svg;
+  }
+
+  &:hover {
+    filter: var(--filter-hover)
+  }
+
+  &__text {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    color: var(--responsible-main-text-color);
+    font-family: "PT Sans Caption", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    text-wrap: nowrap;
+    max-width: 225px;
+  }
+}

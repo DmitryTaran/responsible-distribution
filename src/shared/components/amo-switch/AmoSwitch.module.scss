@@ -1,0 +1,46 @@
+.switch {
+  width: 33px;
+  height: 20px;
+  border: 1px solid #CACACA;
+  border-radius: 40px;
+  box-shadow: 0 4px 4px 0 #00000040 inset;
+  transition: 0.3s;
+  cursor: pointer;
+  &-primary {
+    background-color: #606A75;
+
+    &-active {
+      background-color: #366FB4;
+    }
+
+    &:has(input[disabled]) {
+      background-color: #A6AFBA;
+    }
+  }
+
+  &-success {
+    background-color: #E56B6B;
+    &-active {
+      background-color: #AFE56B;
+
+      &:has(input[disabled]) {
+        background-color: #B1B7A5;
+      }
+
+    }
+    &:has(input[disabled]):not(&-active) {
+      background-color: #B7A5A5;
+    }
+
+  }
+
+  &-svg {
+    transition: .25s;
+    &-checked {
+      transform: translateX(13px);
+    }
+  }
+
+}
+
+

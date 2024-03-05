@@ -1,0 +1,118 @@
+@import 'shared/styles/mixins.module';
+
+@mixin placeholder {
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &:-moz-placeholder,
+  &:-ms-input-placeholder {
+    font-family: inherit;
+    font-size: 15px;
+  }
+}
+
+@mixin reset {
+  outline: none;
+  border: none;
+  color: inherit;
+}
+
+.amo-input {
+  &__wrapper {
+    position: relative;
+    color: #363B44;
+    display: flex;
+    align-items: center;
+    &-with-gap{
+      gap: 10px;
+    }
+  }
+
+  &__standard {
+    width: 100%;
+    font-size: 15px;
+    padding: 5px 0;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-bottom: 1px solid var(--responsible-gray-input-color);
+  }
+
+  &__outline {
+    @include reset;
+    @include placeholder;
+    width: 4rem;
+    font-size: 12px;
+    padding: 7px 10px;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid var(--responsible-light-text, #C2C2C2);
+    background: var(--responsible-main-bg-color, #FFF);
+  }
+
+  &__time {
+    @include reset;
+    font-size: 15px;
+    overflow: visible;
+    position: relative;
+    padding: 10px 10px 10px 8px  ;
+    display: flex;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid var(--responsible-light-text, #C2C2C2);
+    background: var(--responsible-main-bg-color, #FFF);
+    font-family: 'PT Sans';
+    display: flex;
+    line-height: normal;
+
+    &::-webkit-calendar-picker-indicator {
+      display: none;
+      border: 1px solid;
+      cursor: pointer;
+    }
+  }
+
+  &__error, &__error:focus, &__error:focus-within, &__error:hover {
+    border-color: var(--responsible-delete-color);
+  }
+
+  &__time-label {
+    color: var(--Text, #363B44);
+    font-family: "PT Sans", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.time-picker {
+  &__series-list {
+    box-sizing: border-box;
+    margin: 0;
+    list-style: none;
+    max-height: 170px;
+    overflow-y: scroll;
+    padding: 2px 5px;
+    border-radius: 3px;
+    background: #FFF;
+    box-shadow: 0px 2px 5.8px 0px rgba(0, 0, 0, 0.15);
+    @include scrollbar
+  }
+
+  &__series-item {
+    display: flex;
+    line-height: .7em;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    font-family: "PT Sans";
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 5px;
+
+    &:hover {
+      background-color: var(--Hover, #F6F6F6);
+    }
+  }
+}

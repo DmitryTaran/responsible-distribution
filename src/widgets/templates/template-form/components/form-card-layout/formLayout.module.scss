@@ -1,0 +1,15 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  margin-top: 20px;
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+  background: var(--responsible-main-bg-color);
+  box-shadow: -1px 1px 18.9px 0px rgba(0, 0, 0, 0.15);
+}

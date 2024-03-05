@@ -1,0 +1,44 @@
+$radius: 37;
+
+.countdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.countdown-number {
+  font-family: 'PT Sans', Arial, sans-serif;
+  color: black;
+  display: inline-block;
+  font-size: 20px;
+  line-height: 60px;
+  font-weight: 800;
+}
+
+.svg-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+.circle {
+
+  stroke: #D8DED7;
+
+  &_animated {
+    stroke: #4077D6;
+    animation: countdown linear forwards;
+  }
+}
+
+@keyframes countdown {
+  from {
+    stroke-dasharray: calc($radius * 2 * 3.14) 0;
+  }
+  to {
+    stroke-dasharray: 0 calc($radius * 2 * 3.14);
+  }
+}

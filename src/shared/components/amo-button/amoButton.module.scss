@@ -1,0 +1,88 @@
+
+.amo-button {
+  text-wrap: nowrap;
+  padding: 14px;
+  display: inline-flex;
+  align-items: center;
+  transition: 0.3s;
+  gap: 5px;
+  border-radius: 3px;
+  color: white;
+  font-family: PT Sans Caption, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+
+  &-primary {
+    border: 1px solid #4077D6;
+    background-color: #4C8BF7;
+
+    &:hover {
+      border: 1px solid #346AC8;
+      background: #447DDE;
+    }
+
+    &:active {
+      border: 1px solid #416BB4;
+      background: #416BB4;
+    }
+
+    &:focus {
+      outline: 1px solid #76ACDE;
+    }
+  }
+
+  &-danger {
+    border: 1px solid #D64040;
+    background: #F7564C;
+
+    &:hover {
+      border: 1px solid #D64040;
+      background: #F7564C;
+    }
+
+    &:active {
+      border: 1px solid #D64040;
+      background: #D64040;
+    }
+
+    &:focus {
+      outline: 1px solid #76ACDE;
+    }
+  }
+
+  &:disabled {
+    border: 1px solid #8C8F95;
+    background: #A3ABB8;
+  }
+
+  &__content {
+    position: relative;
+
+    &__text {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+
+    &_loading {
+      opacity: 0;
+    }
+
+    &__loader {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      opacity: 0;
+
+      &_loading {
+        opacity: 1;
+      }
+    }
+  }
+
+}

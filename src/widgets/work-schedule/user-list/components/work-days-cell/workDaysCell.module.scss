@@ -1,0 +1,52 @@
+.work-days-cell {
+  transition: height 0.3s;
+  justify-content: start;
+  flex-grow: 1;
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+  width: fit-content;
+
+  &:hover &-icon {
+    color: var(--responsible-table-blue)
+  }
+
+  &-icon {
+    transition: 0.5s, color .25s;
+    cursor: pointer;
+    color: var(--responsible-gray-input-color);
+
+    &-reverted {
+      transform: rotateX(180deg);
+    }
+  }
+
+  &-text-wrapper {
+    position: relative;
+
+    &-content {
+      transition: opacity 0.2s;
+
+      &-visible {
+        opacity: 100%;
+      }
+
+      &-hidden {
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        z-index: -1;
+      }
+    }
+
+  }
+}
+
+.work-days-text-grid {
+  display: grid;
+  grid-template-columns: 23px auto;
+
+  &:not(:last-of-type) &-time:after {
+    content: ',';
+  }
+}

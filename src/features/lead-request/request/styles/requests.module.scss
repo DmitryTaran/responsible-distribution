@@ -1,0 +1,56 @@
+@import "widgets/lead-request-layout/lead-request-layout.module";
+
+.request-box {
+  position: absolute;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--responsible-main-bg-color);
+  border-radius: 15px;
+  box-shadow: 0 2px 16.6px 5px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &--slide {
+    right: 0;
+  }
+
+  &--unslide {
+    right: calc(-389px - $notifications-wrapper-margin-right);
+  }
+}
+
+.text-container {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.ref-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  &__ref {
+    color: var(--responsible-main-blue-color);
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+
+    &_disabled {
+      cursor: default;
+      color: var(--responsible-main-text-color);
+      text-decoration: none;
+    }
+
+  }
+}

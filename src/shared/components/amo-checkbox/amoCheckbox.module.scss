@@ -1,0 +1,29 @@
+$border-default: 1px solid #c2c2c2;
+$border-disabled: 1px solid #F0F0F0;
+$border-focused: 1px solid #76ACDE;
+
+$background-default: #fff;
+$background-hover: #F0F0F0;
+
+.amo-checkbox {
+  cursor: pointer;
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: $border-default;
+  background-color: $background-default;
+  &:focus-within {
+    outline: $border-focused;
+  }
+  &__disabled {
+    border: $border-disabled;
+    cursor: default;
+  }
+  &:not(.amo-checkbox__disabled):hover {
+    background-color: $background-hover;
+  }
+}

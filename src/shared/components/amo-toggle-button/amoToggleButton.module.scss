@@ -1,0 +1,36 @@
+.amo-toggle-button {
+  box-sizing: border-box;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: 1px solid var(--responsible-table-border-color);
+  transition: color 0.2s, border 0.2s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-transform: uppercase;
+  color: var(--responsible-table-border-color);
+  font-family: "PT Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: normal;
+
+  &_hoverable {
+    &:hover {
+      border-color: var(--responsible-table-blue);
+      color: var(--responsible-main-text-color)
+    }
+  }
+
+  &_active {
+    color: var(--responsible-main-text-color);
+    border-color: var(--responsible-main-blue-color);
+  }
+
+  &_invalid {
+    color: var(--responsible-table-border-color);
+    border-color: var(--responsible-delete-color);
+  }
+
+}

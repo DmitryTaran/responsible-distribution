@@ -1,0 +1,40 @@
+@import "../../lib/styles/mixins.module";
+
+.selected-manager {
+  display: flex;
+  padding: 7px 8px 7px 15px;
+  align-items: center;
+  justify-content: space-between;
+
+  &__svg {
+    @include hidden-svg;
+  }
+
+  &:hover {
+    background-color: var(--responsible-day-hover-color);
+  }
+
+}
+
+.name-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__name {
+    color: var(--responsible-main-text-color);
+    font-family: "PT Sans", sans-serif;
+    font-size: 15px;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    width: 211px;
+
+    &_with-input {
+      margin-right: 8px;
+      width: 166px;
+    }
+
+  }
+
+}

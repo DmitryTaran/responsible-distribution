@@ -1,0 +1,7 @@
+.arrow-icon {
+  color: var(--responsible-gray-input-color);
+  transition: 0.2s;
+  &-reversed {
+    transform: rotateX(180deg);
+  }
+}

@@ -1,0 +1,21 @@
+.invalid-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__svg-container {
+
+    &__svg {
+      display: flex;
+      align-items: center;
+      color: var(--responsible-table-border-color);
+      transition: color .25s;
+
+      &:hover {
+        color: var(--responsible-table-blue)
+      }
+    }
+
+    padding-right: 30px;
+  }
+}

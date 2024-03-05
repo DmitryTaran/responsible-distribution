@@ -1,0 +1,13 @@
+.day-container {
+  display: flex;
+  //gap: 9px;
+  justify-content: space-between;
+
+  &_error {
+    margin-top: 5px;
+    color: var(--responsible-delete-color);
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    line-height: normal;
+  }
+}

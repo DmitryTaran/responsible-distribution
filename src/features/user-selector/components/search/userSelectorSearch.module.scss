@@ -1,0 +1,29 @@
+@import "../../lib/styles/mixins.module";
+@import "shared/styles/mixins.module";
+
+.select {
+  box-shadow: 0 2px 5.8px 0 rgba(0, 0, 0, 0.15);
+  max-height: 241px;
+  overflow-y: auto;
+  @include scrollbar;
+  &-item {
+    @include selectable-row;
+    background-color: var(--responsible-main-bg-color);
+  }
+}
+
+
+.search-input {
+  flex-basis: 100%;
+  padding: 10px 10px 10px 8px;
+  border: 0;
+  border-bottom: 1px solid var(--responsible-table-border-color);
+  border-radius: 3px 0 0 0;
+  background: var(--responsible-main-bg-color);
+  outline: none;
+  color: var(--responsible-main-text-color);
+
+  &::placeholder {
+    color: var(--responsible-table-border-color)
+  }
+}

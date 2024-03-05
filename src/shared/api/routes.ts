@@ -1,0 +1,26 @@
+export const ServerRoutes = {
+	BaseUrl: `${ENV_SERVER_URL}/${ENV_WIDGET_API_ENDPOINT_PROD || ENV_WIDGET_API_ENDPOINT_DEV || ENV_WIDGET_API_ENDPOINT_TEST}`,
+	RedistributionWsRoute: `/${ENV_WEBSOCKET_ENDPOINT_PROD || ENV_WEBSOCKET_ENDPOINT_DEV || ENV_WEBSOCKET_ENDPOINT_TEST}`,
+	RedistributionSocketPath: '/socket/',
+	AccountUrl: window.location.origin,
+	AmoWebHookRoute: '/api/v4/webhooks',
+	AmoPipelineRoute: '/api/v4/leads/pipelines',
+	AmoPipelineStatusesRoute: '/api/v4/leads/pipelines/',
+	Login: '/account/login',
+	GetSingleStatus: '/users/exact',
+	Managers: '/users',
+	UserRoles: '/widget-role',
+	Triggers: '/triggers',
+	Schedule: '/work-schedules',
+	CreateOrUpdateSchedule: '/create-or-update-bulk',
+	ResetUsersWorkSchedule: '/reset-users-work-schedules',
+	Template: '/distribution-templates',
+	WebhookRoute: '/conversions/web-hooks',
+	GroupReportRoute: '/reports/groups',
+	UserReportRoute: '/reports/users',
+	ConversionReportRoute: '/reports/conversions',
+	UserChartRoute: '/reports/users-count',
+	AllDealsCount: '/reports/all-time-count',
+	PaymentRoute: '/account/status'
+} as const;
+

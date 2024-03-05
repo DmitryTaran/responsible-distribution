@@ -1,0 +1,58 @@
+@import 'shared/styles/mixins.module';
+@import '../../lib/styles/mixins.module';
+
+
+.selectable-managers {
+  height: 295px;
+  box-sizing: border-box;
+  width: 219px;
+  overflow-y: auto;
+  @include scrollbar;
+}
+
+.group-row {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 8px;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: filter .2s;
+
+  &:hover {
+    filter: var(--filter-hover);
+  }
+
+  &__text {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    color: var(--responsible-main-text-color);
+    font-family: "PT Sans Caption", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    text-wrap: nowrap;
+    max-width: 168px;
+  }
+
+  &__svg {
+    color: var(--responsible-main-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    transition: .25s;
+
+    &_open {
+      transform: rotateX(180deg);
+    }
+
+  }
+}
+
+.selectable-manager-row {
+  @include selectable-row
+}

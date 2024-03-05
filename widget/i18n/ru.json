@@ -1,0 +1,24 @@
+{
+	"widget": {
+		"name": "Распределение заявок от REON",
+		"short_description": "Краткое описание",
+		"description": "Описание",
+		"tour_description": "Пам пам"
+	},
+	"settings": {
+		"client_name": "Ваше имя",
+		"phone_number": "Номер телефона",
+		"terms_of_use": "Пользовательское соглашение"
+	},
+	"left_menu": {
+		"icon_title": "Распределение",
+		"reon_statuses_title": "Статусы",
+		"reon_settings_title": "Настройки",
+		"reon_reports_title": "Отчеты",
+		"reon_instructions_title": "Инструкция"
+	},
+	"dp": {
+		"template_id": "Выберите шаблон:",
+		"widget_instance_id": "123"
+	}
+}

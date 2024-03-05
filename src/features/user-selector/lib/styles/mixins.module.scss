@@ -1,0 +1,31 @@
+@mixin hidden-svg {
+  display: flex;
+  align-items: center;
+  transition: opacity .10s;
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  color: var(--responsible-gray-input-color);
+
+  &_hidden {
+    opacity: 1;
+  }
+}
+
+@mixin selectable-row {
+  padding: 7px 15px 7px 15px;
+  color: var(--responsible-main-text-color);
+  font-family: "PT Sans", sans-serif;
+  font-size: 15px;
+  line-height: normal;
+  cursor: pointer;
+  transition: background-color .25s;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+
+  &:hover {
+    background-color: var(--responsible-day-hover-color);
+  }
+}

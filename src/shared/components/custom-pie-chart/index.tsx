@@ -1,0 +1,1 @@
+export { ChartWithLabels } from './components/chart-with-labels/ChartWithLabels';

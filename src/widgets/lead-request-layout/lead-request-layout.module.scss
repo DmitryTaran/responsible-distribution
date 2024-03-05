@@ -1,0 +1,19 @@
+$notifications-wrapper-margin-right: 14px;
+
+.notifications-wrapper {
+	position: fixed;
+	background-color: transparent;
+	top: 14px;
+	right: $notifications-wrapper-margin-right;
+	width: 600px;
+	max-width: 100%;
+	& * {
+		box-sizing: border-box;
+	}
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	& >:not(:last-child) {
+		margin: 0 0 5px 0;
+	}
+}

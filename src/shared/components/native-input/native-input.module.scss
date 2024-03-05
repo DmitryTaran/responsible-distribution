@@ -1,0 +1,110 @@
+@mixin placeholder {
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &:-moz-placeholder,
+  &:-ms-input-placeholder {
+    color: var(--responsible-table-border-color);
+    font-family: inherit;
+    font-size: 12px;
+  }
+}
+
+@mixin reset {
+  padding: 0;
+  outline: none;
+  border: none;
+  color: inherit;
+  background-color: inherit;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  &[type=number] {
+    -moz-appearance: textfield;
+  }
+}
+
+.native-input {
+  &__wrapper {
+    --label-width: 114px;
+    color: #363B44;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__standard {
+    transition: 0.25s;
+    @include placeholder;
+    @include reset;
+    width: 100%;
+    font-size: 15px;
+    padding: 5px 0;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-bottom: 1px solid var(--responsible-gray-input-color);
+
+    &::placeholder {
+      color: var(--responsible-table-border-color)
+    }
+  }
+
+  &__outline {
+
+    @include reset;
+    @include placeholder;
+    transition: .25s;
+
+    width: 2em;
+    font-size: 15px;
+    padding: 2px 4px;
+    text-align: left;
+    border-radius: 3px;
+    border: 1px solid var(--responsible-light-text, #C2C2C2);
+    background: var(--responsible-main-bg-color, #FFF);
+  }
+
+  &__time {
+    @include reset;
+    font-size: 12px;
+    overflow: visible;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid var(--responsible-light-text, #C2C2C2);
+    background: var(--responsible-main-bg-color, #FFF);
+    font-family: 'PT Sans';
+
+    &::-webkit-calendar-picker-indicator {
+      display: none;
+      justify-self: center;
+      width: var(--label-width);
+      right: calc(100% + 10px);
+      border: 1px solid;
+      cursor: pointer;
+      opacity: 0;
+      border-color: var(--responsible-delete-color);
+    }
+  }
+
+  &__outline:focus, &__outline:hover, &__outline:focus-within, &__standard:focus, &__standard:focus-within, &__standard:hover {
+    border-color: var(--Elements-Blue, #76ACDE);
+  }
+
+  &__error, &__error:focus, &__error:focus-within, &__error:hover {
+    border-color: var(--responsible-delete-color);
+  }
+
+  &__time-label {
+    color: var(--Text, #363B44);
+    font-family: "PT Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

@@ -1,0 +1,56 @@
+@import "shared/styles/mixins.module";
+
+.select {
+  max-height: 138px;
+  overflow-y: auto;
+  @include scrollbar;
+}
+
+
+.select-item {
+  padding: 2px 7px 2px 7px;
+  font-size: 15px;
+  line-height: normal;
+  font-family: "PT Sans", sans-serif;
+  cursor: pointer;
+  transition: box-shadow 0.2s, background-color 0.2s;
+
+  &:hover {
+    background-color: var(--responsible-day-hover-color)
+  }
+
+  &-selected {
+    box-shadow: inset 2px 0 var(--responsible-table-blue);
+    background-color: var(--responsible-day-hover-color)
+  }
+
+}
+
+.confirm-text {
+  font-family: "PT Sans", sans-serif;
+  padding-top: 2px;
+  color: var(--responsible-table-grey);
+  font-size: 12px;
+  line-height: normal;
+  cursor: pointer;
+  align-self: flex-end;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    color: var(--responsible-table-blue);
+  }
+
+  &-active {
+    color: var(--responsible-table-blue)
+  }
+}
+
+.filter-container {
+  padding: 4px 7px 0 7px;
+  display: flex;
+  flex-direction: column;
+}
+

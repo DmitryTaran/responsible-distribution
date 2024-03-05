@@ -1,0 +1,29 @@
+.title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.title {
+  color: var(--responsible-primary-font-color-light);
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.usernames {
+  transition: height 0.3s;
+  color: var(--responsible-primary-font-color-light);
+  font-family: "PT Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: normal;
+  max-width: 270px;
+  &-hidden {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}

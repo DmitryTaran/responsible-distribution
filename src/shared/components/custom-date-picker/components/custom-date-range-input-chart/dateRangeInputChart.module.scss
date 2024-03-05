@@ -1,0 +1,18 @@
+.dateRangeInput{
+  box-sizing: border-box;
+  padding: 10px 7px;
+  align-items: center;
+  display: flex;
+  border-radius: 3px;
+  border: 1px solid var(--responsible-table-border-color);
+  outline: none;
+  font-family: "PT Sans", sans-serif;
+  color: var(--responsible-main-text-color);
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+  width: 142px;
+  &:focus {
+    border: 1px solid var(--responsible-table-blue)
+  }
+}

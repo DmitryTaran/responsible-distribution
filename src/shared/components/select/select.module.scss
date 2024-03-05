@@ -1,0 +1,39 @@
+.select {
+	&__list-button {
+		border: none;
+		padding: 5px 0;
+		border-bottom: 1px solid #848484;
+		background: transparent;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		transition: 0.15s;
+		cursor: pointer;
+		&_open,
+		&:hover {
+			border-color: #76acde;
+		}
+	}
+	&__list-button-icon {
+		color: #c2c2c2;
+		transition: 0.15s;
+		&_open {
+			color: #76acde;
+		}
+	}
+	&__list-wrapper {
+		list-style: none;
+	}
+	&__list-item {
+		cursor: pointer;
+		user-select: none;
+		color: #363b44;
+		font-size: 15px;
+		padding: 5px 7px;
+		transition: 0.15s;
+		&_selected,
+		&:hover {
+			background-color: #f6f6f6;
+		}
+	}
+}

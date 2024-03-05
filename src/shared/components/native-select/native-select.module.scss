@@ -1,0 +1,92 @@
+@import "shared/styles/mixins.module";
+
+.native-select {
+  &__input {
+    display: none;
+    opacity: 0;
+  }
+
+  &__wrapper {
+    color: var(--responsible-main-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    padding: 3px 0;
+    border-bottom: 1px solid var(--responsible-gray-input-color);
+    transition: border-bottom-color 0.25s;
+
+    &-active {
+      &:hover {
+        border-color: var(--responsible-table-blue)
+      }
+
+      &:focus-within {
+        border-color: var(--responsible-table-blue)
+      }
+    }
+
+    &-invalid {
+      border-color: var(--responsible-delete-color)
+    }
+
+    &-disabled {
+      border-color: var(--responsible-table-border-color);
+    }
+
+  }
+
+  &__open-button {
+    @include button-reset();
+    font-size: 15px;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__placeholder {
+      color: var(--responsible-table-border-color)
+    }
+
+    &_disabled {
+      cursor: default;
+    }
+
+  }
+
+  &__list-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #fff;
+    box-shadow: 0 2px 5.8px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 3px 3px;
+
+  }
+
+  &__list-item {
+    @include button-reset();
+    width: 100%;
+    padding: 5px 7px;
+    transition: background-color 0.3s;
+
+    &:hover, &_selected, &:focus-within {
+      background-color: #F6F6F6;
+    }
+
+  }
+
+  &__icon {
+    color: var(--responsible-table-border-color);
+    transition: .15s linear;
+    transform: rotateX(180deg);
+
+    &_open {
+      transform: rotateX(0);
+      color: var(--responsible-table-blue);
+    }
+  }
+}
+

@@ -1,0 +1,36 @@
+.form-input {
+    font-size: 15px;
+    padding: 7px 10px;
+}
+.form-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px
+}
+.helper {
+    &__wrapper {
+        align-self: flex-end;
+        display: flex;
+        flex-direction: column;
+    }
+    &__title { 
+        color: var(--Text, #363B44);
+        font-family: "PT Sans";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__subtitle {
+        color:  #366FB4;
+        font-family: "PT Sans";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        &-error {
+          color: var(--responsible-delete-color)
+        }
+
+    }
+}

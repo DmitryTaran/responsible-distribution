@@ -1,0 +1,73 @@
+@mixin text-style($size, $color, $weight) {
+	margin: 0;
+	font-family: 'PT Sans';
+	color: $color;
+	font-size: $size;
+	font-style: normal;
+	font-weight: $weight;
+	line-height: normal;
+	letter-spacing: 0%;
+}
+
+
+.confirm {
+	&__wrapper {
+		position: relative;
+		padding: 30px;
+		max-width: 440px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+	&__close-btn-icon {
+		width: 20px;
+		height: 20px;
+	}
+	&__close-btn {
+		cursor: pointer;
+		padding: 0;
+		position: absolute;
+		display: flex;
+		top: 8px;
+		right: 8px;
+		background: transparent;
+		border: none;
+		color: #c2c2c2;
+		transition: 0.3s;
+		&:hover {
+			color: #848484;
+		}
+	}
+	&__title {
+		@include text-style(18px, var(--Text, #363b44), 400);
+	}
+	&__description-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+	&__description-title,
+	&__description-subtitle {
+		@include text-style(15px, var(--Text, #363b44), 200);
+		
+	}
+	&__buttons-wrapper {
+		margin-top: 10px;
+		display: flex;
+		gap: 20px;
+	}
+	&__button {
+		cursor: pointer;
+		background-color: transparent;
+		border: none;
+		@include text-style(18px, var(--elements-grey, #c2c2c2), 400);
+		transition: 0.15s;
+		&_delete {
+			color: #363b44;
+		}
+		&:hover {
+			color: var(--elements-blue, #76acde);
+			text-decoration-line: underline;
+		}
+	}
+}
